@@ -46,14 +46,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
-            // read inputs
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
-            bool crouch = Input.GetKey(KeyCode.C);
-
-            // calculate move direction to pass to character
             if (!_inputDisabled)
             {
+                // read inputs
+                float h = CrossPlatformInputManager.GetAxis("Horizontal");
+                float v = CrossPlatformInputManager.GetAxis("Vertical");
+                bool crouch = Input.GetKey(KeyCode.C);
+
+                // calculate move direction to pass to character
+
                 if (m_Cam != null)
                 {
                     // calculate camera relative direction to move:
@@ -65,20 +66,26 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     // we use world-relative directions in the case of no main camera
                     m_Move = v * Vector3.forward + h * Vector3.right;
                 }
-#if !MOBILE_INPUT
+                m_Move *= 0.5f;
+                #if !MOBILE_INPUT
                 // walk speed multiplier
-                if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
-#endif
+                if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 2f;
+                #endif
 
                 // pass all parameters to the character control script
                 m_Character.Move(m_Move, crouch, m_Jump);
                 m_Jump = false;
             }
+            else
+            {
+                m_Move = new Vector3(0, 0, 0);
+                m_Character.Move(m_Move, false, m_Jump);
+            }
         }
 
         public void SetInput(bool condition)
         {
-            _inputDisabled = condition;
+            _inputDisabled = !condition;
         }
     }
 }
