@@ -5,7 +5,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class UIScript : MonoBehaviour
 {
-    public void Close()
+    public virtual void Close()
     {
         gameObject.SetActive(false);
         FindObjectOfType<ThirdPersonUserControl>().SetInput(true);
