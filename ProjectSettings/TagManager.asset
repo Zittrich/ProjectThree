@@ -8,6 +8,7 @@ TagManager:
   - NPCInfoScreen
   - DialogueController
   - LevelStartPopUp
+  - InteractionIndicator
   layers:
   - Default
   - TransparentFX

@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpItem : MonoBehaviour
+public class PickUpItem : InteractionScript
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private InventoryScript inventory;
 
-    // Update is called once per frame
-    void Update()
+    public Sprite InventoryIcon;
+    public string Name;
+    public string InfoText;
+
+    private void Start()
     {
-        
+        inventory = GameObject.FindGameObjectWithTag("InventoryScreen").GetComponent<InventoryScript>();
+    }
+    public override void Interact()
+    {
+        inventory.Pickup(this);
     }
 }

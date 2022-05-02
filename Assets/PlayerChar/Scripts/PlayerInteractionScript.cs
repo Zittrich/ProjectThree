@@ -7,21 +7,39 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class PlayerInteractionScript : MonoBehaviour
 {
     public float InteractionRadius;
+
     private NPCScript _thisNPC;
     private InteractionScript _thisInteraction;
+
     private Ray _ray;
     private RaycastHit _hit;
 
-    public Text InteractionDisplay;
+    private GameObject _inventoryScreen;
+    private Text _interactionIndicator;
+
+    private void Start()
+    {
+        _interactionIndicator = GameObject.FindGameObjectWithTag("InteractionIndicator").GetComponent<Text>();
+        _interactionIndicator.gameObject.SetActive(false);
+
+        _inventoryScreen = GameObject.FindGameObjectWithTag("InventoryScreen");
+        _inventoryScreen.SetActive(false);
+    }
+
     void Update()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * InteractionRadius, InteractionRadius);
         foreach (var hitCollider in hitColliders)
         {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                _inventoryScreen.SetActive(!_inventoryScreen.active);
+            }
+
             if (hitCollider.gameObject.GetComponent<NPCScript>())
             {
                 _thisNPC = hitCollider.gameObject.GetComponent<NPCScript>();
-                InteractionDisplay.gameObject.SetActive(true);
+                _interactionIndicator.gameObject.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     _thisNPC.Interact();
@@ -33,7 +51,7 @@ public class PlayerInteractionScript : MonoBehaviour
             if (hitCollider.gameObject.GetComponent<InteractionScript>())
             {
                 _thisInteraction = hitCollider.gameObject.GetComponent<InteractionScript>();
-                InteractionDisplay.gameObject.SetActive(true);
+                _interactionIndicator.gameObject.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     _thisInteraction.Interact();
@@ -41,12 +59,17 @@ public class PlayerInteractionScript : MonoBehaviour
                 break;
             }
 
-            InteractionDisplay.gameObject.SetActive(false);
+            _interactionIndicator.gameObject.SetActive(false);
         }
 
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             CheckForNPC();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            DropItem();
         }
     }
     void CheckForNPC()
@@ -58,6 +81,19 @@ public class PlayerInteractionScript : MonoBehaviour
             if(_hit.transform.GetComponent<NPCScript>())
             {
                 _hit.transform.GetComponent<NPCScript>().ToggleInfoScreen();
+            }
+        }
+    }
+
+    void DropItem()
+    {
+        _ray = GameObject.FindGameObjectWithTag("ViewCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(_ray, out _hit))
+        {
+            if (_hit.transform.GetComponent<InventorySlot>())
+            {
+                _hit.transform.GetComponent<InventorySlot>().Unassign();
             }
         }
     }

@@ -11,20 +11,11 @@ public class InventoryScript : MonoBehaviour
     {
         for (int i = 0; i < InventorySlots.Length; i++)
         {
-            if(InventorySlots[i].AssignedItem == null)
+            if(InventorySlots[i]._assignedItem == null)
             {
-
+                InventorySlots[i].Assign(item);
+                break;
             }
         }
-    }
-
-    public void Use(int slot)
-    {
-
-    }
-
-    public void Drop(int slot)
-    {
-
     }
 }
