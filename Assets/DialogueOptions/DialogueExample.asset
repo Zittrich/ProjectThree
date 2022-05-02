@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eee034f61a8e99428791452e2dbcff2, type: 3}
+  m_Name: DialogueExample
+  m_EditorClassIdentifier: 
+  OptionResults:
+  - {fileID: 11400000, guid: 85478f2c494dc774e9f9e3ea3d5a2dc8, type: 2}
+  - {fileID: 11400000, guid: 45aa6d5f30b1b794caf7c8ec7ce011d2, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  OptionNames:
+  - My name is Gerhard.
+  - Leave me alone!
+  - 
+  - 
+  DialogueFriendshipChange: 01000000fcffffff0000000000000000
+  DialogueText: Hey, my name is Redblock. Who are you?
+  IsEnd: 0

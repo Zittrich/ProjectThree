@@ -6,12 +6,18 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityStandardAssets.Characters.ThirdPerson;
 
-public class DialogueController : DialogueOption
+public class DialogueController : MonoBehaviour
 {
     public Button[] DialogueButtons = new Button[4];
     public Button QuitButton;
     public Text TextWidget;
     public Text NameWidget;
+
+    private DialogueOption[] _optionResults = new DialogueOption[4];
+    private string[] _optionNames = new string[4];
+    [Range(-4, 4)] private int[] _dialogueFriendshipChange = new int[4];
+    private string _dialogueText;
+    private bool _isEnd;
 
     private NPCScript _connectedNPC;
 
@@ -23,43 +29,43 @@ public class DialogueController : DialogueOption
 
         for (int i = 0; i < thisDialogue.OptionResults.Length; i++)
         {
-            OptionNames[i] = thisDialogue.OptionNames[i];
-            OptionResults[i] = thisDialogue.OptionResults[i];
-            DialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
+            _optionNames[i] = thisDialogue.OptionNames[i];
+            _optionResults[i] = thisDialogue.OptionResults[i];
+            _dialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
         }
 
-        if (OptionResults.Length == 0)
+        if (_optionResults.Length == 0)
         {
             QuitButton.gameObject.SetActive(true);
         }
 
-        IsEnd = thisDialogue.IsEnd;
-        DialogueText = thisDialogue.DialogueText;
+        _isEnd = thisDialogue.IsEnd;
+        _dialogueText = thisDialogue.DialogueText;
 
         UpdateInterface();
     }
 
     public void SelectOption(int dialogueOption)
     {
-        DialogueOption thisDialogue = OptionResults[dialogueOption];
+        DialogueOption thisDialogue = _optionResults[dialogueOption];
 
-        _connectedNPC.ChangeFriendshipLevel(DialogueFriendshipChange[dialogueOption]);
+        _connectedNPC.ChangeFriendshipLevel(_dialogueFriendshipChange[dialogueOption]);
         _connectedNPC.UpdateInfoScreen();
 
         for (int i = 0; i < thisDialogue.OptionResults.Length; i++)
         {
-            OptionNames[i] = thisDialogue.OptionNames[i];
-            OptionResults[i] = thisDialogue.OptionResults[i];
-            DialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
+            _optionNames[i] = thisDialogue.OptionNames[i];
+            _optionResults[i] = thisDialogue.OptionResults[i];
+            _dialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
         }
 
-        if (OptionResults.Length == 0)
+        if (_optionResults.Length == 0)
         {
             QuitButton.gameObject.SetActive(true);
         }
 
-        IsEnd = thisDialogue.IsEnd;
-        DialogueText = thisDialogue.DialogueText;
+        _isEnd = thisDialogue.IsEnd;
+        _dialogueText = thisDialogue.DialogueText;
 
         UpdateInterface();
     }
@@ -72,19 +78,19 @@ public class DialogueController : DialogueOption
     public void UpdateInterface()
     {
 
-        for (int i = 0; i < OptionResults.Length; i++)
+        for (int i = 0; i < _optionResults.Length; i++)
         {
-            DialogueButtons[i].GetComponentInChildren<Text>().text = OptionNames[i];
+            DialogueButtons[i].GetComponentInChildren<Text>().text = _optionNames[i];
 
-            if (OptionNames[i] == "")
+            if (_optionNames[i] == "")
                 DialogueButtons[i].gameObject.SetActive(false);
             else
                 DialogueButtons[i].gameObject.SetActive(true);
         }
 
-        TextWidget.text = DialogueText;
+        TextWidget.text = _dialogueText;
 
-        if (IsEnd == true)
+        if (_isEnd == true)
         {
             QuitButton.gameObject.SetActive(true);
             return;
