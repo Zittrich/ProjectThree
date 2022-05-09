@@ -9,6 +9,7 @@ TagManager:
   - DialogueController
   - LevelStartPopUp
   - InteractionIndicator
+  - InventoryScreen
   layers:
   - Default
   - TransparentFX

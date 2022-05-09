@@ -7,10 +7,11 @@ public class PickUpItem : InteractionScript
     private InventoryScript inventory;
 
     public Sprite InventoryIcon;
+    public GameObject ThisItem;
     public string Name;
     public string InfoText;
 
-    private void Start()
+    private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("InventoryScreen").GetComponent<InventoryScript>();
     }

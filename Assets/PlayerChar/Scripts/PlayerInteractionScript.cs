@@ -31,10 +31,6 @@ public class PlayerInteractionScript : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * InteractionRadius, InteractionRadius);
         foreach (var hitCollider in hitColliders)
         {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                _inventoryScreen.SetActive(!_inventoryScreen.active);
-            }
 
             if (hitCollider.gameObject.GetComponent<NPCScript>())
             {
@@ -62,7 +58,12 @@ public class PlayerInteractionScript : MonoBehaviour
             _interactionIndicator.gameObject.SetActive(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            _inventoryScreen.SetActive(!_inventoryScreen.active);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             CheckForNPC();
         }
