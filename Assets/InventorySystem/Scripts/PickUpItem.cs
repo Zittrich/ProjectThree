@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PickUpItem : InteractionScript
 {
-    private InventoryScript inventory;
+    private InventoryScript _inventory;
 
     public Sprite InventoryIcon;
     public GameObject ThisItem;
     public string Name;
     public string InfoText;
 
-    private void Awake()
+    private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("InventoryScreen").GetComponent<InventoryScript>();
+        _inventory = Manager.Use<UIManager>().Inventory;
     }
     public override void Interact()
     {
-        inventory.Pickup(this);
+        _inventory.Pickup(this);
     }
 }

@@ -50,6 +50,8 @@ public class DialogueController : MonoBehaviour
         DialogueOption thisDialogue = _optionResults[dialogueOption];
 
         _connectedNPC.ChangeFriendshipLevel(_dialogueFriendshipChange[dialogueOption]);
+        if(_optionResults[dialogueOption].DialogueTraitUnlock != null)
+            _connectedNPC.AddTrait(_optionResults[dialogueOption].DialogueTraitUnlock);
         _connectedNPC.UpdateInfoScreen();
 
         for (int i = 0; i < thisDialogue.OptionResults.Length; i++)

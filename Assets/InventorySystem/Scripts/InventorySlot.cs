@@ -18,7 +18,7 @@ public class InventorySlot : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
+        _player = Manager.Use<PlayerManager>().Player;
     }
     public void Assign(PickUpItem item)
     {

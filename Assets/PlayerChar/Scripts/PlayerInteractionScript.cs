@@ -14,16 +14,20 @@ public class PlayerInteractionScript : MonoBehaviour
     private Ray _ray;
     private RaycastHit _hit;
 
-    private GameObject _inventoryScreen;
+    private InventoryScript _inventoryScreen;
     private Text _interactionIndicator;
+    private SkilltreeController _skillTree;
 
     private void Start()
     {
-        _interactionIndicator = GameObject.FindGameObjectWithTag("InteractionIndicator").GetComponent<Text>();
+        _interactionIndicator = Manager.Use<UIManager>().InteractionIndicator;
         _interactionIndicator.gameObject.SetActive(false);
 
-        _inventoryScreen = GameObject.FindGameObjectWithTag("InventoryScreen");
-        _inventoryScreen.SetActive(false);
+        _inventoryScreen = Manager.Use<UIManager>().Inventory;
+        _inventoryScreen.gameObject.SetActive(false);
+
+        _skillTree = Manager.Use<UIManager>().SkillTree;
+        _skillTree.gameObject.SetActive(false);
     }
 
     void Update()
@@ -60,7 +64,12 @@ public class PlayerInteractionScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            _inventoryScreen.SetActive(!_inventoryScreen.active);
+            _inventoryScreen.gameObject.SetActive(!_inventoryScreen.gameObject.active);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            _skillTree.gameObject.SetActive(!_skillTree.gameObject.active);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))

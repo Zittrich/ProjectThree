@@ -7,20 +7,22 @@ public class NPCScript : MonoBehaviour
 {
     public DialogueOption InteractDialogue;
     public string Name;
-    public string[] InfoText = new string[5];
     public Sprite Portrait;
-    private int FriendStage;
+    public string[] InfoText = new string[5];
+    public List<TraitsObject> Traits;
 
+    private int _friendStage;
     private bool _isInDialogue;
     private bool _infoIsOpen;
+    int i = 0;
 
     private DialogueController DialoguePopUp;
     public InfoScreenController InfoScreen { get; private set; }
 
     private void Start()
     {
-        InfoScreen = GameObject.FindGameObjectWithTag("NPCInfoScreen").GetComponent<InfoScreenController>();
-        DialoguePopUp = GameObject.FindGameObjectWithTag("DialogueController").GetComponent<DialogueController>();
+        InfoScreen = Manager.Use<UIManager>().InfoScreen;
+        DialoguePopUp = Manager.Use<UIManager>().DialogueController;
         InfoScreen.gameObject.SetActive(false);
         DialoguePopUp.gameObject.SetActive(false);
     }
@@ -45,27 +47,59 @@ public class NPCScript : MonoBehaviour
         {
             InfoScreen.gameObject.SetActive(!InfoScreen.gameObject.active);
 
-            InfoScreen.FriendStage.value = FriendStage;
+            InfoScreen.FriendStage.value = _friendStage;
             InfoScreen.Name.text = Name;
-            InfoScreen.InfoText.text = InfoText[FriendStage];
+            InfoScreen.InfoText.text = InfoText[_friendStage];
             InfoScreen.Portrait.sprite = Portrait;
             _infoIsOpen = InfoScreen.gameObject.active;
+
+            if(_infoIsOpen)
+            {
+                foreach (TraitsObject trait in Traits)
+                {
+                    InfoScreen.AddTrait(trait, i);
+                    i++;
+                }
+            }
+
+            else
+            {
+                KillAllChildren(InfoScreen.TraitsScreen.content.gameObject);
+                i = 0;
+            }
         }
     }
 
     public void UpdateInfoScreen()
     {
-        InfoScreen.FriendStage.value = FriendStage;
-        InfoScreen.InfoText.text = InfoText[FriendStage];
+        InfoScreen.FriendStage.value = _friendStage;
+        InfoScreen.InfoText.text = InfoText[_friendStage];
+        foreach (TraitsObject trait in Traits)
+        {
+            InfoScreen.AddTrait(trait, i);
+        }
     }
 
     public void ChangeFriendshipLevel(int ammount)
     {
-        FriendStage = Mathf.Clamp(FriendStage += ammount, 0, 4);
+        _friendStage = Mathf.Clamp(_friendStage += ammount, 0, 4);
     }
 
     public void SetIsInDialogue(bool condition)
     {
         _isInDialogue = condition;
+    }
+
+    public void AddTrait(TraitsObject trait)
+    {
+        Traits.Add(trait);
+    }
+
+    private void KillAllChildren(GameObject parent)
+    {
+        foreach(Transform child in parent.GetComponentInChildren<Transform>())
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
