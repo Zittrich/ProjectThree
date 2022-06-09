@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlayerManager : ManagerModule
 {
     public GameObject Player;
+    public Camera MainCamera;
 }
