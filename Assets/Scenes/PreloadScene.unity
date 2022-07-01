@@ -409,6 +409,7 @@ MonoBehaviour:
   Inventory: {fileID: 382443172}
   MouseOverDisplay: {fileID: 382443171}
   SkillTree: {fileID: 382443170}
+  PlayerSocialDisplay: {fileID: 2132499450}
 --- !u!114 &940321175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,3 +751,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 12120793135019318, guid: 6bb085d501adfdf46bc8ef01af56d63b, type: 3}
   m_PrefabInstance: {fileID: 2033209867}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2132499450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 613857280187943542, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+  m_PrefabInstance: {fileID: 382443169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0718470b1e2858d46b5d7d79a5a6a624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

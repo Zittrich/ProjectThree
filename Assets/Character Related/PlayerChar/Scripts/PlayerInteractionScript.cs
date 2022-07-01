@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 
+[RequireComponent(typeof(PlayerStatistics))]
 public class PlayerInteractionScript : MonoBehaviour
 {
     public float InteractionRadius;
