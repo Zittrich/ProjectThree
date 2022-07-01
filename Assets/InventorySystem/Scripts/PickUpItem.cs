@@ -14,6 +14,7 @@ public class PickUpItem : InteractionScript
     private void Start()
     {
         _inventory = Manager.Use<UIManager>().Inventory;
+        ThisItem = gameObject;
     }
     public override void Interact()
     {
