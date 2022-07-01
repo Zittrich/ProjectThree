@@ -10,6 +10,7 @@ public class BookItem : PickUpItem
     private void Start()
     {
         playerStatistics = Manager.Use<PlayerManager>().Player.GetComponent<PlayerStatistics>();
+        base.Start();
     }
     public override void Interact()
     {

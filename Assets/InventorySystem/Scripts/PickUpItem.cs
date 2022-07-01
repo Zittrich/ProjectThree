@@ -11,7 +11,7 @@ public class PickUpItem : InteractionScript
     public string Name;
     public string InfoText;
 
-    private void Start()
+    public void Start()
     {
         _inventory = Manager.Use<UIManager>().Inventory;
         ThisItem = gameObject;

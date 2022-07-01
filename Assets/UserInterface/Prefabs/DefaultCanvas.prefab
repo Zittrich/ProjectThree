@@ -1628,8 +1628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0718470b1e2858d46b5d7d79a5a6a624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SocialCounter: {fileID: 0}
-  WisdomCounter: {fileID: 0}
+  SocialCounter: {fileID: 3363377679763608984}
+  WisdomCounter: {fileID: 6214729429005706101}
 --- !u!1 &7379723640254735092
 GameObject:
   m_ObjectHideFlags: 0

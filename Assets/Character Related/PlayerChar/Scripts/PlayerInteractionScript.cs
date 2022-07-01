@@ -19,6 +19,8 @@ public class PlayerInteractionScript : MonoBehaviour
     private Text _interactionIndicator;
     private SkilltreeController _skillTree;
 
+    public GameObject OriginPoint;
+
     private void Start()
     {
         _interactionIndicator = Manager.Use<UIManager>().InteractionIndicator;
@@ -33,7 +35,7 @@ public class PlayerInteractionScript : MonoBehaviour
 
     void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position + transform.forward * InteractionRadius, InteractionRadius);
+        Collider[] hitColliders = Physics.OverlapSphere(OriginPoint.transform.position + transform.forward * InteractionRadius, InteractionRadius);
         foreach (var hitCollider in hitColliders)
         {
 
@@ -112,7 +114,7 @@ public class PlayerInteractionScript : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position + transform.forward * InteractionRadius, InteractionRadius);
+        Gizmos.DrawWireSphere(OriginPoint.transform.position + transform.forward * InteractionRadius, InteractionRadius);
 
         Gizmos.DrawRay(Camera.main.ScreenPointToRay(Input.mousePosition));
     }
