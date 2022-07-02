@@ -13,4 +13,5 @@ public class UIManager : ManagerModule
     public MouseOverDisplay MouseOverDisplay;
     public SkilltreeController SkillTree;
     public PlayerSocialDisplay PlayerSocialDisplay;
+    public QuestWindow QuestWindow;
 }

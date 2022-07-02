@@ -2588,6 +2588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2258712046988615442, guid: 1b2d12eb296fafd47b4b169d2301f522, type: 3}
+      propertyPath: OneTimeUse
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2258712046988615443, guid: 1b2d12eb296fafd47b4b169d2301f522, type: 3}
       propertyPath: m_Name
       value: Book

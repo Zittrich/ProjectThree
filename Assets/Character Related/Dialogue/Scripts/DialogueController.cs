@@ -16,10 +16,19 @@ public class DialogueController : MonoBehaviour
     private DialogueOption[] _optionResults = new DialogueOption[4];
     private string[] _optionNames = new string[4];
     [Range(-4, 4)] private int[] _dialogueFriendshipChange = new int[4];
+    private QuestObject[] _assignedQuest = new QuestObject[4];
     private string _dialogueText;
     private bool _isEnd;
+    private bool _oneTimeUse;
+    private DialogueOption _newDialogue;
 
+    private QuestWindow _questWindow;
     private NPCScript _connectedNPC;
+
+    private void Start()
+    {
+        _questWindow = Manager.Use<UIManager>().QuestWindow;
+    }
 
     public void StartDialogue(DialogueOption dialogueOption, NPCScript connectedNPC)
     {
@@ -32,6 +41,7 @@ public class DialogueController : MonoBehaviour
             _optionNames[i] = thisDialogue.OptionNames[i];
             _optionResults[i] = thisDialogue.OptionResults[i];
             _dialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
+            _assignedQuest[i] = thisDialogue.AssignedQuest[i];
         }
 
         if (_optionResults.Length == 0)
@@ -40,6 +50,8 @@ public class DialogueController : MonoBehaviour
         }
 
         _isEnd = thisDialogue.IsEnd;
+        _oneTimeUse = thisDialogue.OneTimeUse;
+        _newDialogue = thisDialogue.NewDialogue;
         _dialogueText = thisDialogue.DialogueText;
 
         UpdateInterface();
@@ -52,6 +64,8 @@ public class DialogueController : MonoBehaviour
         _connectedNPC.ChangeFriendshipLevel(_dialogueFriendshipChange[dialogueOption]);
         if(_optionResults[dialogueOption].DialogueTraitUnlock != null)
             _connectedNPC.AddTrait(_optionResults[dialogueOption].DialogueTraitUnlock);
+        if (_assignedQuest[dialogueOption] != null)
+            _questWindow.AssignQuest(_assignedQuest[dialogueOption]);
         _connectedNPC.UpdateInfoScreen();
 
         for (int i = 0; i < thisDialogue.OptionResults.Length; i++)
@@ -59,6 +73,7 @@ public class DialogueController : MonoBehaviour
             _optionNames[i] = thisDialogue.OptionNames[i];
             _optionResults[i] = thisDialogue.OptionResults[i];
             _dialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
+            _assignedQuest[i] = thisDialogue.AssignedQuest[i];
         }
 
         if (_optionResults.Length == 0)
@@ -67,6 +82,8 @@ public class DialogueController : MonoBehaviour
         }
 
         _isEnd = thisDialogue.IsEnd;
+        _oneTimeUse = thisDialogue.OneTimeUse;
+        _newDialogue = thisDialogue.NewDialogue;
         _dialogueText = thisDialogue.DialogueText;
 
         UpdateInterface();
@@ -96,6 +113,11 @@ public class DialogueController : MonoBehaviour
         {
             QuitButton.gameObject.SetActive(true);
             return;
+        }
+
+        if(_oneTimeUse)
+        {
+            _connectedNPC.InteractDialogue = _newDialogue;
         }
     }
 

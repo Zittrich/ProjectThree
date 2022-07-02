@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class QuestController : MonoBehaviour
 {
-
+    public QuestObject AssignedQuest;
 }

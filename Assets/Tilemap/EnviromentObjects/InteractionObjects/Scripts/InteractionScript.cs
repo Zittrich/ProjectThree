@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InteractionScript : MonoBehaviour
 {
+    public int TimeConsumption;
     virtual public void Interact()
     {
 

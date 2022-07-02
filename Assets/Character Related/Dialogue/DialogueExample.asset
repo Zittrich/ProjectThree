@@ -23,5 +23,11 @@ MonoBehaviour:
   - 
   - 
   DialogueFriendshipChange: 01000000fcffffff0000000000000000
+  AssignedQuest:
+  - {fileID: 11400000, guid: 7d15f33b85ae0b44a8e23e9437e3972d, type: 2}
+  - {fileID: 11400000, guid: 7d15f33b85ae0b44a8e23e9437e3972d, type: 2}
+  - {fileID: 11400000, guid: 7d15f33b85ae0b44a8e23e9437e3972d, type: 2}
+  - {fileID: 11400000, guid: 7d15f33b85ae0b44a8e23e9437e3972d, type: 2}
+  DialogueTraitUnlock: {fileID: 0}
   DialogueText: Hey, my name is Redblock. Who are you?
   IsEnd: 0
