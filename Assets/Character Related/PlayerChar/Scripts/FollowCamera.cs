@@ -7,12 +7,22 @@ public class FollowCamera : MonoBehaviour
     public GameObject FollowTarget;
     public Vector3 Offset;
 
-    private void Update()
+    private void FixedUpdate()
     {
-          transform.position = new Vector3(
-              FollowTarget.transform.localPosition.x + Offset.x, 
-              FollowTarget.transform.localPosition.y + Offset.y,
-              FollowTarget.transform.localPosition.z + Offset.z
+
+        Offset.x -= Input.mouseScrollDelta.x;
+        Offset.x += Input.mouseScrollDelta.y;
+
+        Offset.y += Input.mouseScrollDelta.x;
+        Offset.y -= Input.mouseScrollDelta.y;
+
+        Offset.z -= Input.mouseScrollDelta.x;
+        Offset.z += Input.mouseScrollDelta.y;
+
+        transform.position = new Vector3(
+              FollowTarget.transform.position.x + Offset.x, 
+              FollowTarget.transform.position.y + Offset.y,
+              FollowTarget.transform.position.z + Offset.z
               );
     }
 }
