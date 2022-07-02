@@ -455,6 +455,7 @@ MonoBehaviour:
   PlayerSocialDisplay: {fileID: 2132499450}
   QuestWindow: {fileID: 144625690}
   TimeWindow: {fileID: 1083969368}
+  Mediaplayer: {fileID: 1303688519}
 --- !u!114 &940321175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +561,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!328 &1303688519 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 4886995110810182107, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+  m_PrefabInstance: {fileID: 382443169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1562663670
 PrefabInstance:
   m_ObjectHideFlags: 0
