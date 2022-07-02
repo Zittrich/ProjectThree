@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class UIManager : ManagerModule
 {
@@ -15,4 +16,5 @@ public class UIManager : ManagerModule
     public PlayerSocialDisplay PlayerSocialDisplay;
     public QuestWindow QuestWindow;
     public TimeWindow TimeWindow;
+    public VideoPlayer Mediaplayer;
 }

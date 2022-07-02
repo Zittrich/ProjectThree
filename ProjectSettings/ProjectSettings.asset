@@ -795,7 +795,7 @@ PlayerSettings:
     Android: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;CROSS_PLATFORM_INPUT
     Windows Store Apps: MOBILE_INPUT
-    iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT;ODIN_INSPECTOR;ODIN_INSPECTOR_3
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

@@ -7,7 +7,7 @@ public class PickUpItem : InteractionScript
     private InventoryScript _inventory;
 
     public Sprite InventoryIcon;
-    public GameObject ThisItem;
+    private GameObject ThisItem;
     public string Name;
     public string InfoText;
 

@@ -7,6 +7,8 @@ public class FollowCamera : MonoBehaviour
     public GameObject FollowTarget;
     public Vector3 Offset;
 
+    private Vector3 _previousPosition;
+
     private void FixedUpdate()
     {
 

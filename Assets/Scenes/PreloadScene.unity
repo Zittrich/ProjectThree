@@ -569,7 +569,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4577806595618525760, guid: 61684f995ae8c174db351c1136cf7c65, type: 3}
       propertyPath: near clip plane
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4577806595618525761, guid: 61684f995ae8c174db351c1136cf7c65, type: 3}
       propertyPath: m_RootOrder
@@ -622,7 +622,11 @@ PrefabInstance:
     - target: {fileID: 4577806595618525773, guid: 61684f995ae8c174db351c1136cf7c65, type: 3}
       propertyPath: FollowTarget
       value: 
-      objectReference: {fileID: 2033209868}
+      objectReference: {fileID: 2033209869}
+    - target: {fileID: 4577806595618525773, guid: 61684f995ae8c174db351c1136cf7c65, type: 3}
+      propertyPath: TurnSensitivity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61684f995ae8c174db351c1136cf7c65, type: 3}
 --- !u!20 &1562663671 stripped
