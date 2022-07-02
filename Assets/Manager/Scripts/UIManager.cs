@@ -12,4 +12,7 @@ public class UIManager : ManagerModule
     public InventoryScript Inventory;
     public MouseOverDisplay MouseOverDisplay;
     public SkilltreeController SkillTree;
+    public PlayerSocialDisplay PlayerSocialDisplay;
+    public QuestWindow QuestWindow;
+    public TimeWindow TimeWindow;
 }
