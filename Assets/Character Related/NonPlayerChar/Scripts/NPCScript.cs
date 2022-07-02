@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCScript : MonoBehaviour
+public class NPCScript : InteractionScript
 {
     public DialogueOption InteractDialogue;
     public string Name;
@@ -27,7 +27,7 @@ public class NPCScript : MonoBehaviour
         DialoguePopUp.gameObject.SetActive(false);
     }
 
-    public void Interact()
+    public override void Interact()
     {
         if (!_isInDialogue)
         {
@@ -39,6 +39,7 @@ public class NPCScript : MonoBehaviour
             DialoguePopUp.SetName(Name);
             SetIsInDialogue(true);
         }
+        base.Interact();
     }
 
     public void ToggleInfoScreen()

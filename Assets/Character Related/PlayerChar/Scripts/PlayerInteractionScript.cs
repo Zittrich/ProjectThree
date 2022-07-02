@@ -38,6 +38,14 @@ public class PlayerInteractionScript : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(OriginPoint.transform.position + transform.forward * InteractionRadius, InteractionRadius);
         foreach (var hitCollider in hitColliders)
         {
+            if(hitCollider.gameObject.GetComponent<TimeConsumer>())
+            {
+                _interactionIndicator.text = $"Press E to interact (-{hitCollider.gameObject.GetComponent<TimeConsumer>().TimeConsumption} Time)";
+            }
+            else
+            {
+                _interactionIndicator.text = $"Press E to interact";
+            }
 
             if (hitCollider.gameObject.GetComponent<NPCScript>())
             {

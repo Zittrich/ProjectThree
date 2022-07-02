@@ -17,6 +17,8 @@ public class TimeWindow : MonoBehaviour
     {
         Time -= ammount;
         UpdateUI();
+
+        Time = Mathf.Clamp(Time, 0, int.MaxValue);
     }
 
     private void UpdateUI()
