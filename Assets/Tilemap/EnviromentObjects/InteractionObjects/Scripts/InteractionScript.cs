@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class InteractionScript : MonoBehaviour
 {
-    public int TimeConsumption;
     virtual public void Interact()
     {
+        if (GetComponent<TimeConsumer>())
+        {
+            Manager.Use<UIManager>().TimeWindow.DecreaseTime(GetComponent<TimeConsumer>().TimeConsumption);
+        }
 
     }
 }

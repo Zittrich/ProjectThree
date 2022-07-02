@@ -14,4 +14,5 @@ public class UIManager : ManagerModule
     public SkilltreeController SkillTree;
     public PlayerSocialDisplay PlayerSocialDisplay;
     public QuestWindow QuestWindow;
+    public TimeWindow TimeWindow;
 }

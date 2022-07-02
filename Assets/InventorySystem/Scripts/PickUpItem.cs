@@ -19,5 +19,6 @@ public class PickUpItem : InteractionScript
     public override void Interact()
     {
         _inventory.Pickup(this);
+        base.Interact();
     }
 }

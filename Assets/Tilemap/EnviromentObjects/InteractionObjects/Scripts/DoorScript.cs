@@ -20,5 +20,6 @@ public class DoorScript : InteractionScript
             transform.DORotate(new Vector3(0, 0), 1);
             _isOpen = false;
         }
+        base.Interact();
     }
 }
