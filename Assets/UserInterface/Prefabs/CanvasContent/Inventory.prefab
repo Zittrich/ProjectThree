@@ -330,10 +330,6 @@ PrefabInstance:
       value: InventorySlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8297011159463007330, guid: 1f3d93b2d94c9f74a89f4173eb28cd5a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2966842883446770374}
-    - target: {fileID: 8297011159463007330, guid: 1f3d93b2d94c9f74a89f4173eb28cd5a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
