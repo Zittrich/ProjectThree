@@ -21,6 +21,7 @@ public class PreloadLoader : MonoBehaviour
         {
             _instance = this;
         }
+
         SceneManager.LoadScene(PreloadScene, LoadSceneMode.Additive);
     }
 }
