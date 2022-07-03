@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84eb941fe5dbc754e9eaf9e43eee410c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AssignedQuest: {fileID: 0}
 --- !u!114 &4909814898324453868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,10 +1111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9b8571d9875b046bfba27a12553cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WisdomSkill: 0
-  SocialSkill: 0
   MaxWisdom: 15
   MaxSocial: 15
+  MaximumTime: 0
 --- !u!1 &12120793135019724
 GameObject:
   m_ObjectHideFlags: 0

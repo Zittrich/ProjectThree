@@ -1039,6 +1039,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeConsumption: 5
+--- !u!1001 &1657807160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1048.1953
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 474.08325
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -426.88452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688549, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070540677334688555, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
+      propertyPath: m_Name
+      value: Preloader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cf859b6b913d264996f43e35aa829fc, type: 3}
 --- !u!1 &1703017939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1374434169360954532, guid: 0cb87bed9042db74883f468b1e25ccd8, type: 3}
@@ -2019,6 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryIcon: {fileID: 0}
+  ThisItem: {fileID: 0}
   Name: Kristall
   InfoText: Kristall, den man zum brauen benutzen kann.
 --- !u!33 &8330839514210756592
@@ -2064,6 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryIcon: {fileID: 0}
+  ThisItem: {fileID: 0}
   Name: Ingredient 02
   InfoText: Zutat zum Brauen (02)
 --- !u!4 &8666232414080328248
@@ -2108,6 +2167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryIcon: {fileID: 0}
+  ThisItem: {fileID: 0}
   Name: Ingredient 01
   InfoText: Zutat zum Brauen (01)
 --- !u!4 &8891792826389235202
