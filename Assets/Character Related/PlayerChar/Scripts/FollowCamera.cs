@@ -7,7 +7,7 @@ public class FollowCamera : MonoBehaviour
     public GameObject FollowTarget;
     public Vector3 Offset;
 
-    private Vector3 _previousPosition;
+    private float _previousPosition;
 
     private void FixedUpdate()
     {
@@ -26,5 +26,13 @@ public class FollowCamera : MonoBehaviour
               FollowTarget.transform.position.y + Offset.y,
               FollowTarget.transform.position.z + Offset.z
               );
+
+        transform.LookAt(FollowTarget.transform);
+
+        if(Input.GetKey(KeyCode.Mouse2))
+        {
+            _previousPosition = Input.mousePosition.x;
+            transform.Translate(Vector3.right * Time.deltaTime * (Input.mousePosition.x -_previousPosition));
+        }
     }
 }

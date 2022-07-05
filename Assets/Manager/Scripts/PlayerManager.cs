@@ -6,4 +6,11 @@ public class PlayerManager : ManagerModule
 {
     public GameObject Player;
     public Camera MainCamera;
+
+    private void Awake()
+    {
+        Player = FindObjectOfType<PlayerInteractionScript>().gameObject;
+        MainCamera = FindObjectOfType<FollowCamera>().GetComponent<Camera>();
+        base.Awake();
+    }
 }
