@@ -22,12 +22,13 @@ public class InventorySlot : MonoBehaviour
     }
     public void Assign(PickUpItem item)
     {
-        item.gameObject.SetActive(false);
 
         _collider = item.GetComponent<Collider>();
         Image.sprite = item.InventoryIcon;
         Name.text = item.Name;
         _assignedItem = item;
+
+        item.gameObject.SetActive(false);
     }
 
     public void Unassign()

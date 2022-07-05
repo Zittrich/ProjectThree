@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientItem : PickUpItem
+public class BaseInteractable : InteractionScript
 {
-    
 }
