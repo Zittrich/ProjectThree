@@ -8,7 +8,6 @@ public class FollowCamera : MonoBehaviour
     public Vector3 Offset;
 
     private float _previousPosition;
-
     private void FixedUpdate()
     {
 

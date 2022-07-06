@@ -33,6 +33,7 @@ public class InventorySlot : MonoBehaviour
 
     public void Unassign()
     {
+        _player = Manager.Use<PlayerManager>().Player;
         _assignedItem.gameObject.SetActive(true);
 
         _assignedItem.transform.position = _player.transform.position 

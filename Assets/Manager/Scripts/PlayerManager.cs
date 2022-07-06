@@ -9,8 +9,8 @@ public class PlayerManager : ManagerModule
 
     private void Awake()
     {
-        Player = FindObjectOfType<PlayerInteractionScript>().gameObject;
         MainCamera = FindObjectOfType<FollowCamera>().GetComponent<Camera>();
+        Player = FindObjectOfType<QuestController>().gameObject;
         base.Awake();
     }
 }

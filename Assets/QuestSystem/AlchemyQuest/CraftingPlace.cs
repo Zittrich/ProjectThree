@@ -16,7 +16,7 @@ public class CraftingPlace : MonoBehaviour
     private GameObject _player;
     private void Start()
     {
-        Manager.Use<PlayerManager>().Player = _player;
+        _player = Manager.Use<PlayerManager>().Player;
     }
 
     private void Update()

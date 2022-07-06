@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BookItem : InteractionScript
 {
-    private PlayerStatistics playerStatistics;
+    private GameObject playerStatistics;
     public int WisdomIncrease = 5;
     public bool OneTimeUse;
     private bool _used;
 
     private void Start()
     {
-        playerStatistics = Manager.Use<PlayerManager>().Player.GetComponent<PlayerStatistics>();
+        playerStatistics = Manager.Use<PlayerManager>().Player;
     }
     public override void Interact()
     {
@@ -19,14 +19,14 @@ public class BookItem : InteractionScript
         {
             if (!_used)
             {
-                playerStatistics.IncreaseWisdom(WisdomIncrease);
+                playerStatistics.GetComponent<PlayerStatistics>().IncreaseWisdom(WisdomIncrease);
                 _used = true;
                 base.Interact();
             }
         }
         else
         {
-            playerStatistics.IncreaseWisdom(WisdomIncrease);
+            playerStatistics.GetComponent<PlayerStatistics>().IncreaseWisdom(WisdomIncrease);
             base.Interact();
         }
     }
