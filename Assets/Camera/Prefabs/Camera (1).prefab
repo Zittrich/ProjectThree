@@ -133,3 +133,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowTarget: {fileID: 0}
   Offset: {x: -10, y: 10, z: -10}
+  Rotation: 360
