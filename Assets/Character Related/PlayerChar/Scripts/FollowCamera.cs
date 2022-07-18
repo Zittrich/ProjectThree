@@ -6,8 +6,12 @@ public class FollowCamera : MonoBehaviour
 {
     public GameObject FollowTarget;
     public Vector3 Offset;
+    [Range(0, 360)]public float Rotation;
 
-    private float _previousPosition;
+    private void Start()
+    {
+
+    }
     private void FixedUpdate()
     {
 
@@ -26,12 +30,7 @@ public class FollowCamera : MonoBehaviour
               FollowTarget.transform.position.z + Offset.z
               );
 
-        transform.LookAt(FollowTarget.transform);
-
-        if(Input.GetKey(KeyCode.Mouse2))
-        {
-            _previousPosition = Input.mousePosition.x;
-            transform.Translate(Vector3.right * Time.deltaTime * (Input.mousePosition.x -_previousPosition));
-        }
+        transform.LookAt(FollowTarget.transform.position);
+        transform.Rotate(FollowTarget.transform.position, Rotation);
     }
 }
