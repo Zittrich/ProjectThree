@@ -13,16 +13,24 @@ MonoBehaviour:
   m_Name: FRA_1
   m_EditorClassIdentifier: 
   OptionResults:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 152faca18d18bb54fbec709c3789a3f4, type: 2}
+  - {fileID: 11400000, guid: 87430f7b775d23446a4b883184dbd349, type: 2}
+  - {fileID: 11400000, guid: 0ddd26749129f48429ee4f4176d2c7dd, type: 2}
+  - {fileID: 11400000, guid: 479b8b90da2f87d49a84e868c3579481, type: 2}
   OptionNames:
-  - 
-  - 
-  - 
-  - 
+  - Du schreibst doch immer alles so ordentlich mit oder?
+  - Hast du Ahnung von Rezepten? Irgendwie kriege ich das nicht hin.
+  - "(LOCKED) Wei\xDFt du zuf\xE4llig wo ich das Buch \"Zaubertranklehre leicht gemacht\"
+    finde?\""
+  - Ich habe keine Fragen mehr, danke.
   DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: "Oh, das ist dadr\xFCben auf der Box!"
-  IsEnd: 1
+  DialogueText: Joa, das kommt drauf an, was du wissen willst?
+  IsEnd: 0
+  OneTimeUse: 0
+  NewDialogue: {fileID: 0}

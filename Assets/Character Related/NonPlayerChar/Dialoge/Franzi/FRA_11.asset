@@ -10,19 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eee034f61a8e99428791452e2dbcff2, type: 3}
-  m_Name: ZAL_4
+  m_Name: FRA_11
   m_EditorClassIdentifier: 
   OptionResults:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8b07549ed6c2b1f4a82c899a399624de, type: 2}
+  - {fileID: 11400000, guid: 4825e3f85238fab468438646c4e0a30e, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   OptionNames:
-  - Oh, da bleibt nicht mehr viel Zeit..
-  - 
+  - "Was m\xF6chtest du denn daf\xFCr haben?"
+  - Ne danke...
   - 
   - 
   DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: Viel Erfolg!
-  IsEnd: 1
+  DialogueText: "Du willst bestimmt meine Notizen haben oder? Einfach so kriegst
+    du die nicht, aber wenn du willst k\xF6nnen wir tauschen?"
+  IsEnd: 0
+  OneTimeUse: 0
+  NewDialogue: {fileID: 0}

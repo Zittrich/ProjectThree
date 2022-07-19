@@ -23,6 +23,13 @@ MonoBehaviour:
   - 
   - 
   DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: ...
+  DialogueText: Dann ist ja gut, viel Erfolg!
   IsEnd: 1
+  OneTimeUse: 0
+  NewDialogue: {fileID: 0}

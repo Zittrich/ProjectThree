@@ -13,16 +13,23 @@ MonoBehaviour:
   m_Name: ZAL_1
   m_EditorClassIdentifier: 
   OptionResults:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2fab1b42fc4fe4340a5003b861e28a6e, type: 2}
+  - {fileID: 11400000, guid: 392b4777debf39d488d1a09946f20d31, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   OptionNames:
-  - 
-  - 
+  - Ich kriege das Brauen irgendwie nicht hin, ich nehme immer die falschen Zutaten.
+  - "Haben Sie eventuell ein Buch, mit dem man gut lernen k\xF6nnte?"
   - 
   - 
   DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: Ach du schaffst das schon, keine Sorge!
+  DialogueText: Was ist denn das Problem?
   IsEnd: 0
+  OneTimeUse: 0
+  NewDialogue: {fileID: 0}

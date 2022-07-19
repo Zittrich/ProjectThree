@@ -11,7 +11,7 @@ public class NPCScript : InteractionScript
     public string[] InfoText = new string[5];
     public List<TraitsObject> Traits;
 
-    private int _friendStage;
+    public int FriendStage;
     private bool _isInDialogue;
     private bool _infoIsOpen;
     int i = 0;
@@ -48,9 +48,9 @@ public class NPCScript : InteractionScript
         {
             InfoScreen.gameObject.SetActive(!InfoScreen.gameObject.active);
 
-            InfoScreen.FriendStage.value = _friendStage;
+            InfoScreen.FriendStage.value = FriendStage;
             InfoScreen.Name.text = Name;
-            InfoScreen.InfoText.text = InfoText[_friendStage];
+            InfoScreen.InfoText.text = InfoText[FriendStage];
             InfoScreen.Portrait.sprite = Portrait;
             _infoIsOpen = InfoScreen.gameObject.active;
 
@@ -73,8 +73,8 @@ public class NPCScript : InteractionScript
 
     public void UpdateInfoScreen()
     {
-        InfoScreen.FriendStage.value = _friendStage;
-        InfoScreen.InfoText.text = InfoText[_friendStage];
+        InfoScreen.FriendStage.value = FriendStage;
+        InfoScreen.InfoText.text = InfoText[FriendStage];
         foreach (TraitsObject trait in Traits)
         {
             InfoScreen.AddTrait(trait, i);
@@ -83,7 +83,7 @@ public class NPCScript : InteractionScript
 
     public void ChangeFriendshipLevel(int ammount)
     {
-        _friendStage = Mathf.Clamp(_friendStage += ammount, 0, 4);
+        FriendStage = Mathf.Clamp(FriendStage += ammount, 0, 4);
     }
 
     public void SetIsInDialogue(bool condition)

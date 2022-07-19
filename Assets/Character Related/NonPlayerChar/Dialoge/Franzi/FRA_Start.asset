@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eee034f61a8e99428791452e2dbcff2, type: 3}
-  m_Name: ZAL_Base
+  m_Name: FRA_Start
   m_EditorClassIdentifier: 
   OptionResults:
-  - {fileID: 11400000, guid: 48cd72000b8e4f14eaf131ef8dac791e, type: 2}
-  - {fileID: 11400000, guid: eba95fb59936b65479bfb7d33a409d89, type: 2}
+  - {fileID: 11400000, guid: fc2c764e2831c3046aa64df959e3b7d9, type: 2}
+  - {fileID: 11400000, guid: 66f1285fec6902745b7a7039ad58b56c, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   OptionNames:
-  - Ich habe noch ein paar Probleme mit der Klausur...
-  - Oh, ich brauche eigentlich gar keine Hilfe mehr.
+  - Ehrlich gesagt habe ich noch ein paar Probleme mit der Klausur... Ich dachte
+    vielleicht kannst du mir helfen?
+  - Ach vergiss es, gar nichts.
   - 
   - 
   DialogueFriendshipChange: 00000000000000000000000000000000
@@ -27,7 +30,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: Hey, wie kann ich dir helfen?
+  DialogueText: Hallo! Was willst du denn von mir?
   IsEnd: 0
   OneTimeUse: 0
   NewDialogue: {fileID: 0}
