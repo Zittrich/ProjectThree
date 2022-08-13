@@ -54,7 +54,7 @@ public class PlayerInteractionScript : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     _thisNPC.Interact();
-                    FindObjectOfType<ThirdPersonUserControl>().SetInput(false);
+                    //FindObjectOfType<ThirdPersonUserControl>().SetInput(false);
                 }
                 break;
             }
@@ -95,7 +95,7 @@ public class PlayerInteractionScript : MonoBehaviour
     }
     void CheckForNPC()
     {
-        _ray = GameObject.FindGameObjectWithTag("ViewCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(_ray, out _hit))
         {
@@ -108,7 +108,7 @@ public class PlayerInteractionScript : MonoBehaviour
 
     void DropItem()
     {
-        _ray = GameObject.FindGameObjectWithTag("ViewCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(_ray, out _hit))
         {

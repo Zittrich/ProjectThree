@@ -8,6 +8,6 @@ public class UIScript : MonoBehaviour
     public virtual void Close()
     {
         gameObject.SetActive(false);
-        FindObjectOfType<ThirdPersonUserControl>().SetInput(true);
+        //FindObjectOfType<ThirdPersonUserControl>().SetInput(true);
     }
 }
