@@ -30,6 +30,6 @@ MonoBehaviour:
   - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
   DialogueText: Nein, tut mir Leid. Die habe ich auch noch nicht so ganz verstanden.
-  IsEnd: 0
+  IsEnd: 1
   OneTimeUse: 0
   NewDialogue: {fileID: 11400000, guid: fc2c764e2831c3046aa64df959e3b7d9, type: 2}
