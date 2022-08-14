@@ -7,7 +7,7 @@ public class CircleSync : MonoBehaviour
     public static int PosID = Shader.PropertyToID("_Position");
     public static int SizeID = Shader.PropertyToID("_Size");
 
-    public Material WallMaterial;
+   public Material WallMaterial;
     [HideInInspector] public Camera Camera;
     public LayerMask Mask;
     public GameObject FollowPoint;
