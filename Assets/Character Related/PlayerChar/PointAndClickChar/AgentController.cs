@@ -21,7 +21,7 @@ public class AgentController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -32,7 +32,6 @@ public class AgentController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             transform.LookAt(ray.direction);
-            Debug.Log("OOga");
         }
     }
 
