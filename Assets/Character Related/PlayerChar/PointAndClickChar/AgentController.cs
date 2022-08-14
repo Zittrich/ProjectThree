@@ -36,7 +36,6 @@ public class AgentController : MonoBehaviour
         if (!Agent.hasPath)
         {
             Animator.SetBool("Is Run", false);
-            Animator.SetBool("Is Interact", false);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out _hitData);
             transform.DOLookAt(_hitData.point, 0.8f, AxisConstraint.Y);

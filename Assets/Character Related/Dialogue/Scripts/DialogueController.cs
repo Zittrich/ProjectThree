@@ -101,7 +101,7 @@ public class DialogueController : MonoBehaviour
         {
             DialogueButtons[i].GetComponentInChildren<Text>().text = _optionNames[i];
 
-            if (_optionNames[i] == "")
+            if (_optionNames[i] == "" || _optionNames[i] == null)
                 DialogueButtons[i].gameObject.SetActive(false);
             else
                 DialogueButtons[i].gameObject.SetActive(true);
