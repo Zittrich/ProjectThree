@@ -13,6 +13,8 @@ public class WallOpacityController : MonoBehaviour
     public Material WallMaterial;
     public LayerMask Mask;
 
+    private Vector3 _fadeOutRelation = new Vector3(0,0,0);
+
     [HideInInspector] public Camera Camera;
 
     void Start()
@@ -25,7 +27,7 @@ public class WallOpacityController : MonoBehaviour
         var dir = Camera.transform.position - FollowPoint.transform.position;
         var ray = new Ray(FollowPoint.transform.position, dir.normalized);
 
-        if (Physics.Raycast(ray, 30000, Mask))
+        if (GetComponent<Renderer>().isVisible && Manager.Use<PlayerManager>().Player.transform.position.sqrMagnitude - transform.position.sqrMagnitude < _fadeOutRelation.sqrMagnitude)
         {
             _currentOpacity -= Time.deltaTime;
             _currentOpacity = Mathf.Clamp(_currentOpacity, MinimumOpacity, 1);

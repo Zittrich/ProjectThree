@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 
 [RequireComponent(typeof(PlayerStatistics))]
+[RequireComponent(typeof(QuestController))]
+[RequireComponent(typeof(CircleSync))]
+[RequireComponent(typeof(AgentController))]
 public class PlayerInteractionScript : MonoBehaviour
 {
     public float InteractionRadius;

@@ -26,6 +26,14 @@ public class AgentController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
             MoveToMouse();
+
+        if (!Agent.hasPath)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            transform.LookAt(ray.direction);
+            Debug.Log("OOga");
+        }
     }
 
     private void MoveToMouse()
@@ -36,7 +44,7 @@ public class AgentController : MonoBehaviour
         {
             Agent.SetDestination(hitData.point);
         }
-        
+
         Debug.Log("MoveToMouse!");
     }
 }
