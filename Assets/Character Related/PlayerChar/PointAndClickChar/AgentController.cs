@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,7 @@ public class AgentController : MonoBehaviour
 {
     private PlayerController _controller;
     public LayerMask GroundLayer;
+    private RaycastHit _hitData;
 
     public NavMeshAgent Agent;
 
@@ -16,7 +18,6 @@ public class AgentController : MonoBehaviour
     {
         _controller = GetComponent<PlayerController>();
         Agent = GetComponent<NavMeshAgent>();
-
         Cursor.visible = true;
     }
 
@@ -24,24 +25,23 @@ public class AgentController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
             MoveToMouse();
 
         if (!Agent.hasPath)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            transform.LookAt(ray.direction);
+            Physics.Raycast(ray, out _hitData);
+            transform.DOLookAt(_hitData.point, 0.8f, AxisConstraint.Y);
         }
     }
 
     private void MoveToMouse()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitData;
-        if (Physics.Raycast(ray, out hitData, 1000))
+        if (Physics.Raycast(ray, out _hitData))
         {
-            Agent.SetDestination(hitData.point);
+            Agent.SetDestination(_hitData.point);
         }
 
         Debug.Log("MoveToMouse!");
