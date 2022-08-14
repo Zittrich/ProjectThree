@@ -101,9 +101,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b83e39c056b1164f8a88e2d8898c5e9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b83e39c056b1164f8a88e2d8898c5e9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78c437cd243bc35489e303f9ab3f6443, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 2b83e39c056b1164f8a88e2d8898c5e9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8669110967738974231, guid: e406c8c55b71e8240a94bba2e09b1422, type: 3}
     - target: {fileID: 919132149155446097, guid: 2b83e39c056b1164f8a88e2d8898c5e9, type: 3}
       propertyPath: m_Name
-      value: E_Stairs01 (2)
+      value: E_Stairs01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b83e39c056b1164f8a88e2d8898c5e9, type: 3}

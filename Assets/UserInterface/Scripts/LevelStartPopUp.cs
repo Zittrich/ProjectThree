@@ -19,7 +19,7 @@ public class LevelStartPopUp : UIScript
 
     public override void Close()
     {
-        FindObjectOfType<ThirdPersonUserControl>().SetInput(true);
+        //FindObjectOfType<ThirdPersonUserControl>().SetInput(true);
         base.Close();
     }
 }

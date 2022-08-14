@@ -51,9 +51,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5db8d1f4885e3e94daf559df5c7b2c4a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5db8d1f4885e3e94daf559df5c7b2c4a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 78c437cd243bc35489e303f9ab3f6443, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 5db8d1f4885e3e94daf559df5c7b2c4a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 7408411952864474831, guid: abdb5946ad76fbe43b0675b0f7f5b516, type: 3}
     - target: {fileID: 919132149155446097, guid: 5db8d1f4885e3e94daf559df5c7b2c4a, type: 3}
       propertyPath: m_Name
-      value: A_BrickWall12
+      value: A_BrickWall12 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db8d1f4885e3e94daf559df5c7b2c4a, type: 3}
