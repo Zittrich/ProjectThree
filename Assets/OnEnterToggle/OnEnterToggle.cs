@@ -30,6 +30,5 @@ public class OnEnterToggle : MonoBehaviour
                 o.SetActive(TurnOn);
             }
         }
-        Debug.Log("Enter");
     }
 }
