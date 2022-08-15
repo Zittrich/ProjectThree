@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(OutlineView))]
 public class InteractionScript : MonoBehaviour
 {
     virtual public void Interact()

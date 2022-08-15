@@ -1,5 +1,5 @@
 ﻿//
-//  Outline.cs
+//  OutlineView.cs
 //  QuickOutline
 //
 //  Created by Chris Nolet on 3/30/18.

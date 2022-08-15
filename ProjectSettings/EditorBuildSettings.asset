@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PreloadScene.unity
     guid: a49ea01d71aa8f6479cc3e70b0d4ee6f
+  - enabled: 1
+    path: Assets/Scenes/Level_02.unity
+    guid: 8d54d320f95af5f4497aaacf06712a2d
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 82559442a6ff0e345bddb8ec007a3e22, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 20d1537567deb7249931552ba115f2f6, type: 2}

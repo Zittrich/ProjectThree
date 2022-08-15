@@ -16,7 +16,7 @@ public class LevelLogic : MonoBehaviour
             _levelStartPopUp = GameObject.FindGameObjectWithTag("LevelStartPopUp").GetComponent<LevelStartPopUp>();
             _levelStartPopUp.SetPopUp(LevelStartUpOption);
 
-            //FindObjectOfType<AgentController>().SetInput(false);
+            //FindObjectOfType<AgentController>().enabled = false;
         }
         
     }
