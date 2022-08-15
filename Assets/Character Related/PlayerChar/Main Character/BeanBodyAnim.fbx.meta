@@ -21,6 +21,9 @@ ModelImporter:
   - first:
       74: -2483591982332496685
     second: metarig|Run
+  - first:
+      74: 2450780417096620964
+    second: Run (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -56,8 +59,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
-      takeName: Idle
+      name: Run (1)
+      takeName: Run
       internalID: 0
       firstFrame: 0
       lastFrame: 39
@@ -79,7 +82,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.31606883
+        functionName: Stepleft
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8002562
+        functionName: Step
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
