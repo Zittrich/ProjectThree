@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
@@ -10,6 +13,8 @@ public class AgentController : MonoBehaviour
     public LayerMask GroundLayer;
     private RaycastHit _hitData;
     public Animator Animator;
+    public GameObject ClickPointer;
+    public float ClickPointerDuration;
 
     public NavMeshAgent Agent;
     public float Speed;
@@ -28,7 +33,7 @@ public class AgentController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !Agent.isOnOffMeshLink)
         {
             MoveToMouse();
         }
@@ -46,14 +51,7 @@ public class AgentController : MonoBehaviour
             Animator.SetBool("Is Run", true);
         }
 
-        if (Agent.isOnOffMeshLink)
-        {
-            Agent.speed = StairClimbingSpeed;
-        }
-        else
-        {
-            Agent.speed = Speed;
-        }
+        Agent.speed = Agent.isOnOffMeshLink ? StairClimbingSpeed : Speed;
     }
 
     private void MoveToMouse()
@@ -62,6 +60,8 @@ public class AgentController : MonoBehaviour
         if (Physics.Raycast(ray, out _hitData))
         {
             Agent.SetDestination(_hitData.point);
+            GameObject thisIndicator = Instantiate(ClickPointer, _hitData.point + new Vector3(0, 0.5f, 0), Quaternion.Euler(-90, 0, 0));
+            Destroy(thisIndicator, ClickPointerDuration);
         }
 
         Debug.Log("MoveToMouse!");

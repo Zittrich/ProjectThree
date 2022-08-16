@@ -58,6 +58,7 @@ public class PlayerInteractionScript : MonoBehaviour
                 {
                     _thisNPC.Interact();
                     //FindObjectOfType<ThirdPersonUserControl>().SetInput(false);
+                    Manager.Use<PlayerManager>().Player.GetComponent<Animator>().Play("Interact");
                 }
                 break;
             }
@@ -69,6 +70,7 @@ public class PlayerInteractionScript : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     _thisInteraction.Interact();
+                    Manager.Use<PlayerManager>().Player.GetComponent<Animator>().Play("Interact");
                 }
                 break;
             }

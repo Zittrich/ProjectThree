@@ -4,18 +4,18 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class QuestWindow : MonoBehaviour
 {
     public QuestController QuestPrefab;
 
     public List<QuestController> QuestList = new();
+    public GameObject ScrollView;
 
     public void AssignQuest(QuestObject Quest)
     {
-        QuestController thisQuest = Instantiate(QuestPrefab, transform.position - new Vector3(0, QuestPrefab.GetComponent<RectTransform>().rect.height * QuestList.Count, 0),
-            transform.rotation,
-            transform);
+        QuestController thisQuest = Instantiate(QuestPrefab, ScrollView.transform);
         QuestList.Add(thisQuest);
         thisQuest.AssignedQuest = Quest;
         thisQuest.GetComponent<TextMeshProUGUI>().text = Quest.name;
