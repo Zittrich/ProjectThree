@@ -10,14 +10,11 @@ public class InteractionScript : MonoBehaviour
     {
         if (GetComponent<TimeConsumer>())
         {
-            if(GetComponent<TimeConsumer>().TimeConsumption <= Manager.Use<UIManager>().TimeWindow.Time)
+            if(GetComponent<TimeConsumer>().TimeConsumption < Manager.Use<UIManager>().TimeWindow.Time)
                 Manager.Use<UIManager>().TimeWindow.DecreaseTime(GetComponent<TimeConsumer>().TimeConsumption);
             else
             {
-                Manager.Use<UIManager>().TimeWindow.DecreaseTime(10000);
-                Manager.Use<UIManager>().Mediaplayer.gameObject.SetActive(true);
-                Manager.Use<UIManager>().Mediaplayer.Play();
-                Invoke("ClosePlayer", (float)Manager.Use<UIManager>().Mediaplayer.length);
+                FindObjectOfType<EndMediaPlayer>().PlayMedia();
             }
         }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class EndMediaPlayer : MonoBehaviour
@@ -24,10 +25,14 @@ public class EndMediaPlayer : MonoBehaviour
         AudioListener.volume = 0;
 
         Manager.Use<UIManager>().Mediaplayer.gameObject.SetActive(true);
-        Manager.Use<UIManager>().Mediaplayer.clip = ThisClip;
+        if(Manager.Use<UIManager>().PlayerSocialDisplay.WisdomCounter.text == "15")
+            Manager.Use<UIManager>().Mediaplayer.clip = WinClip;
+        else
+        {
+            Manager.Use<UIManager>().Mediaplayer.clip = LoseClip;
+        }
         Manager.Use<UIManager>().Mediaplayer.Play();
-
-
+        
         Invoke("ClosePlayer", (float)Manager.Use<UIManager>().Mediaplayer.length);
     }
 
@@ -35,5 +40,6 @@ public class EndMediaPlayer : MonoBehaviour
     {
         AudioListener.volume = _audio;
         Manager.Use<UIManager>().Mediaplayer.gameObject.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 }
