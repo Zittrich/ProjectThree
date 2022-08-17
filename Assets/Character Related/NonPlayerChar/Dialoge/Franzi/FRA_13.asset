@@ -29,8 +29,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: Ich glaube ganz hinten im Klassenraum rechts oben steht noch eins.
-    Schau da mal.
+  DialogueText: "Das sollte im anderen Klassenraum direkt gegen\xFCber liegen."
   IsEnd: 0
   OneTimeUse: 0
   NewDialogue: {fileID: 0}
+  DialogueObjectSpawns:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
