@@ -32,7 +32,7 @@ public class OnEnterToggle : MonoBehaviour
                 _lastTime = Time.time;
 
                 if(_lastTime + Delay <= Time.time)
-                    o.SetActive(!o.active);
+                    o.SetActive(!o.active); Debug.Log("HIT!");
             }
         }
     }
