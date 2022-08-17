@@ -83,10 +83,10 @@ public class PlayerInteractionScript : MonoBehaviour
             _inventoryScreen.gameObject.SetActive(!_inventoryScreen.gameObject.active);
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             _skillTree.gameObject.SetActive(!_skillTree.gameObject.active);
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -96,6 +96,11 @@ public class PlayerInteractionScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             DropItem();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Manager.Use<UIManager>().SettingsManager.ToggleWindow(Manager.Use<UIManager>().SettingsManager.gameObject);
         }
     }
     void CheckForNPC()

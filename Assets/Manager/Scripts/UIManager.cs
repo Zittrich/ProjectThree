@@ -17,4 +17,5 @@ public class UIManager : ManagerModule
     public QuestWindow QuestWindow;
     public TimeWindow TimeWindow;
     public VideoPlayer Mediaplayer;
+    public SettingsManager SettingsManager;
 }
