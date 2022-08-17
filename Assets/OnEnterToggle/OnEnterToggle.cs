@@ -8,7 +8,6 @@ public class OnEnterToggle : MonoBehaviour
     public int MinInactiveGridLayer;
 
     private List<GameObject> _toggleList = new List<GameObject>();
-    public bool TurnOn;
 
     private void Start()
     {
@@ -27,7 +26,7 @@ public class OnEnterToggle : MonoBehaviour
         {
             foreach (GameObject o in _toggleList)
             {
-                o.SetActive(TurnOn);
+                o.SetActive(!o.active);
             }
         }
     }
