@@ -14,4 +14,5 @@ public class DialogueOption : ScriptableObject
     public bool IsEnd;
     public bool OneTimeUse;
     public DialogueOption NewDialogue;
+    public InteractionScript[] DialogueObjectSpawns = new InteractionScript[4];
 }
