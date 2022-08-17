@@ -29,9 +29,10 @@ public class OnEnterToggle : MonoBehaviour
         {
             if (_lastTime + Delay <= Time.time)
             {
+                _lastTime = Time.time;
                 foreach (GameObject o in _toggleList)
                 {
-                    _lastTime = Time.time;
+                    
 
                     o.SetActive(!o.active);
                 }
