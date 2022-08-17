@@ -27,12 +27,14 @@ public class OnEnterToggle : MonoBehaviour
 
         if (hit[0].transform.GetComponent<PlayerInteractionScript>())
         {
-            foreach (GameObject o in _toggleList)
+            if (_lastTime + Delay <= Time.time)
             {
-                _lastTime = Time.time;
+                foreach (GameObject o in _toggleList)
+                {
+                    _lastTime = Time.time;
 
-                if(_lastTime + Delay <= Time.time)
-                    o.SetActive(!o.active); Debug.Log("HIT!");
+                    o.SetActive(!o.active);
+                }
             }
         }
     }
