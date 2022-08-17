@@ -32,8 +32,6 @@ public class OnEnterToggle : MonoBehaviour
                 _lastTime = Time.time;
                 foreach (GameObject o in _toggleList)
                 {
-                    
-
                     o.SetActive(!o.active);
                 }
             }
