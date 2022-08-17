@@ -23,7 +23,7 @@ public class OnEnterToggle : MonoBehaviour
     private void Update()
     {
         Collider[] hit =
-            Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity);
+            Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2);
 
         if (hit[0].transform.GetComponent<PlayerInteractionScript>())
         {
