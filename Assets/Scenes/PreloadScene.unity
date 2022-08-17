@@ -183,7 +183,7 @@ PrefabInstance:
       objectReference: {fileID: 1173213588}
     - target: {fileID: 426566422298839620, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: QuestList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 567835871575300197, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -507,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4723867624491257914, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100.00004
+      value: 100.00054
       objectReference: {fileID: 0}
     - target: {fileID: 5207711911491831463, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchorMax.x
