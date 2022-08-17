@@ -37,7 +37,9 @@ public class OnEnterToggle : MonoBehaviour
                         o.SetActive(!o.active);
                     }
                 }
+                GetComponent<QuestCompleter>().Interact();
                 break;
+
             }
         }
 

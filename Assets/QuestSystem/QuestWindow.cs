@@ -18,12 +18,12 @@ public class QuestWindow : MonoBehaviour
         QuestController thisQuest = Instantiate(QuestPrefab, ScrollView.transform);
         QuestList.Add(thisQuest);
         thisQuest.AssignedQuest = Quest;
-        thisQuest.GetComponent<TextMeshProUGUI>().text = Quest.name;
+        thisQuest.GetComponent<TextMeshProUGUI>().text = Quest.Name;
     }
 
     public void CompleteQuest(QuestObject Quest)
     {
-        QuestController thisQuest = (QuestController)QuestList.Where(o => o.AssignedQuest == Quest);
+        QuestController thisQuest = QuestList.First(o => o.AssignedQuest == Quest);
         Destroy(thisQuest);
         QuestList.Remove(thisQuest);
     }

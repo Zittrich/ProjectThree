@@ -126,6 +126,5 @@ public class DialogueController : MonoBehaviour
         _connectedNPC.SetIsInDialogue(false);
         QuitButton.gameObject.SetActive(false);
         gameObject.SetActive(false);
-        FindObjectOfType<ThirdPersonUserControl>().SetInput(true);
     }
 }
