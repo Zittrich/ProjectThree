@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eee034f61a8e99428791452e2dbcff2, type: 3}
+  m_Name: FRA_12
+  m_EditorClassIdentifier: 
+  OptionResults:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  OptionNames:
+  - 
+  - 
+  - 
+  - 
+  DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  DialogueTraitUnlock: {fileID: 0}
+  DialogueText: Nein, tut mir Leid. Die habe ich auch noch nicht so ganz verstanden.
+  IsEnd: 1
+  OneTimeUse: 0
+  NewDialogue: {fileID: 11400000, guid: fc2c764e2831c3046aa64df959e3b7d9, type: 2}

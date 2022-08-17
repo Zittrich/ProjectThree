@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eee034f61a8e99428791452e2dbcff2, type: 3}
+  m_Name: FRA_1
+  m_EditorClassIdentifier: 
+  OptionResults:
+  - {fileID: 11400000, guid: 152faca18d18bb54fbec709c3789a3f4, type: 2}
+  - {fileID: 11400000, guid: 87430f7b775d23446a4b883184dbd349, type: 2}
+  - {fileID: 11400000, guid: 0ddd26749129f48429ee4f4176d2c7dd, type: 2}
+  - {fileID: 11400000, guid: 479b8b90da2f87d49a84e868c3579481, type: 2}
+  OptionNames:
+  - Du schreibst doch immer alles so ordentlich mit oder?
+  - Hast du Ahnung von Rezepten? Irgendwie kriege ich das nicht hin.
+  - "(LOCKED) Wei\xDFt du zuf\xE4llig wo ich das Buch \"Zaubertranklehre leicht gemacht\"
+    finde?\""
+  - Ich habe keine Fragen mehr, danke.
+  DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  DialogueTraitUnlock: {fileID: 0}
+  DialogueText: Joa, das kommt drauf an, was du wissen willst?
+  IsEnd: 0
+  OneTimeUse: 0
+  NewDialogue: {fileID: 0}

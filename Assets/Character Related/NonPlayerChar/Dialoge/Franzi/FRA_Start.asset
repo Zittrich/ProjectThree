@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eee034f61a8e99428791452e2dbcff2, type: 3}
+  m_Name: FRA_Start
+  m_EditorClassIdentifier: 
+  OptionResults:
+  - {fileID: 11400000, guid: fc2c764e2831c3046aa64df959e3b7d9, type: 2}
+  - {fileID: 11400000, guid: 66f1285fec6902745b7a7039ad58b56c, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  OptionNames:
+  - Ehrlich gesagt habe ich noch ein paar Probleme mit der Klausur... Ich dachte
+    vielleicht kannst du mir helfen?
+  - Ach vergiss es, gar nichts.
+  - 
+  - 
+  DialogueFriendshipChange: 00000000000000000000000000000000
+  AssignedQuest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  DialogueTraitUnlock: {fileID: 0}
+  DialogueText: Hallo! Was willst du denn von mir?
+  IsEnd: 0
+  OneTimeUse: 0
+  NewDialogue: {fileID: 0}

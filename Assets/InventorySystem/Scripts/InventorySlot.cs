@@ -18,20 +18,22 @@ public class InventorySlot : MonoBehaviour
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
+        _player = Manager.Use<PlayerManager>().Player;
     }
     public void Assign(PickUpItem item)
     {
-        item.gameObject.SetActive(false);
 
         _collider = item.GetComponent<Collider>();
         Image.sprite = item.InventoryIcon;
         Name.text = item.Name;
         _assignedItem = item;
+
+        item.gameObject.SetActive(false);
     }
 
     public void Unassign()
     {
+        _player = Manager.Use<PlayerManager>().Player;
         _assignedItem.gameObject.SetActive(true);
 
         _assignedItem.transform.position = _player.transform.position 
