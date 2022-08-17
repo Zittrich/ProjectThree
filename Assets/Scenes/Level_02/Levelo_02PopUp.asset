@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: Levelo_02PopUp
   m_EditorClassIdentifier: 
   Headline: Tutorial Level
-  InfoText: "Dieses Level dient als Tutorial beziehungsweise als Beispiel Level von
-    TOE. Die Story orientiert sich an einem Beispiel f\xFCr die ABC-Methode.  Im
-    Level hast Du nur eine gewisse Zeit zur Verf\xFCgung. Diese vergeht aber nur
-    beim Interagieren mit entsprechend gekennzeichneten Gegenst\xE4nden. Zus\xE4tzlich
-    bringt das Interagieren auch verschiedene Vorteile und Questfortschritt, es ist
-    also wichtig, wof\xFCr Du dich entscheidest. Ein guter Startpunkt w\xE4re es,
-    sich einen \xDCberblick \xFCber die Situation zu verschaffen und erstmal mit
-    dem Lehrer zu sprechen\u2026"
+  InfoText: "Dies ist das Tutorial Level von TOE's School of Everything. Deine wichtigste
+    Ressource im Spiel ist die Zeit (oben links). Bei bestimmten Handlungen vergeht
+    Zeit, \xFCberleg dir also gut, was du machen m\xF6chtest. Die grundlegenden Mechaniken
+    die Du daf\xFCr brauchst sind laufen [RMouse], interagieren [E] und das Inventar
+    [i]."
