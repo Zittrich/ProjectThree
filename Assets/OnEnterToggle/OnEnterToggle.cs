@@ -25,16 +25,21 @@ public class OnEnterToggle : MonoBehaviour
         Collider[] hit =
             Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2);
 
-        if (hit[0].transform.GetComponent<PlayerInteractionScript>())
+        foreach (Collider col in hit)
         {
-            if (_lastTime + Delay <= Time.time)
+            if (col.transform.GetComponent<PlayerInteractionScript>())
             {
-                _lastTime = Time.time;
-                foreach (GameObject o in _toggleList)
+                if (_lastTime + Delay <= Time.time)
                 {
-                    o.SetActive(!o.active);
+                    _lastTime = Time.time;
+                    foreach (GameObject o in _toggleList)
+                    {
+                        o.SetActive(!o.active);
+                    }
                 }
+                break;
             }
         }
+
     }
 }
