@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1590828961638752150}
   - component: {fileID: 4051971087190527581}
   - component: {fileID: 5152740359281074807}
+  - component: {fileID: 3405228108198914531}
   m_Layer: 0
   m_Name: Ingredient_02
   m_TagString: Untagged
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b1a0ceed6ed2643a7681c8fd51a357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryIcon: {fileID: 0}
+  InventoryIcon: {fileID: 21300000, guid: d89a202eb16919a48a6bf38cf6fd485c, type: 3}
   ThisItem: {fileID: 0}
   Name: Ingredient 02
   InfoText: Zutat zum Brauen (02)
@@ -128,3 +129,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee41cde188e13ea46b00a7039ccd7cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3405228108198914531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395169808230131700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5374421683d3a8e4dab277819004621b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
