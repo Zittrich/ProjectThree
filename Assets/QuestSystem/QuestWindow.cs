@@ -23,8 +23,8 @@ public class QuestWindow : MonoBehaviour
 
     public void CompleteQuest(QuestObject Quest)
     {
-        QuestController thisQuest = QuestList.First(o => o.AssignedQuest == Quest);
-        Destroy(thisQuest);
+        QuestController thisQuest = QuestList.First(o => o.AssignedQuest.Name == Quest.Name);
         QuestList.Remove(thisQuest);
+        Destroy(thisQuest.gameObject);
     }
 }
