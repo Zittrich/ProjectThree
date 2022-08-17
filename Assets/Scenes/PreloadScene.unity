@@ -189,6 +189,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 570087419424801029, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_text
+      value: '       Klausur-vorbereitung:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 570087419424801029, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_margin.z
+      value: -49.721466
+      objectReference: {fileID: 0}
     - target: {fileID: 776951107826161116, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_Color.a
       value: 0.16078432
@@ -482,6 +490,10 @@ PrefabInstance:
       value: -35.78174
       objectReference: {fileID: 0}
     - target: {fileID: 4586788035433389002, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_text
+      value: Verbliebene Zeit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586788035433389002, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_fontSize
       value: 24
       objectReference: {fileID: 0}
@@ -505,9 +517,17 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4292273904
       objectReference: {fileID: 0}
+    - target: {fileID: 4711553211703436818, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4723867624491257914, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100.00054
+      value: 100.00019
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036563817529289650, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_margin.z
+      value: 13.758003
       objectReference: {fileID: 0}
     - target: {fileID: 5207711911491831463, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchorMax.x
@@ -640,6 +660,14 @@ PrefabInstance:
     - target: {fileID: 7345796707437061469, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400778567429508417, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -65.772095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400778567429508417, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.365288
       objectReference: {fileID: 0}
     - target: {fileID: 7458945576476575604, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1056,6 +1084,14 @@ PrefabInstance:
     - target: {fileID: 9020924293942275506, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 118.99994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020924293942275506, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.707672
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114669272620256884, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9160859074547756989, guid: dcc175092b099c544a2c975f2c2964fc, type: 3}
       propertyPath: m_MovementType
