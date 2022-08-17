@@ -29,8 +29,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}
-  DialogueText: "Da neben der T\xFCr h\xE4ngt eine Tafel mit allen Rezepten, die
-    du brauchst. Schau dir die mal an."
+  DialogueText: Hier im Raum sind drei Zutaten versteckt. Wenn du diese gefunden
+    hast, kannst du sie aus deinem Inventar [i] in den Kessel werfen. Das sollte
+    schon reichen!
   IsEnd: 1
   OneTimeUse: 0
   NewDialogue: {fileID: 0}
