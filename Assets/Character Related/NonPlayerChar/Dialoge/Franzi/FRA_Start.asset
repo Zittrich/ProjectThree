@@ -34,3 +34,8 @@ MonoBehaviour:
   IsEnd: 0
   OneTimeUse: 0
   NewDialogue: {fileID: 0}
+  DialogueObjectSpawns:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

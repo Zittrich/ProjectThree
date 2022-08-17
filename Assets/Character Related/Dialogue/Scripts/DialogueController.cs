@@ -17,6 +17,7 @@ public class DialogueController : MonoBehaviour
     private string[] _optionNames = new string[4];
     [Range(-4, 4)] private int[] _dialogueFriendshipChange = new int[4];
     private QuestObject[] _assignedQuest = new QuestObject[4];
+    private InteractionScript[] _assignedInteractionScripts = new InteractionScript[4];
     private string _dialogueText;
     private bool _isEnd;
     private bool _oneTimeUse;
@@ -66,6 +67,8 @@ public class DialogueController : MonoBehaviour
             _connectedNPC.AddTrait(_optionResults[dialogueOption].DialogueTraitUnlock);
         if (_assignedQuest[dialogueOption] != null)
             _questWindow.AssignQuest(_assignedQuest[dialogueOption]);
+        if(_assignedInteractionScripts[dialogueOption] != null)
+            _assignedInteractionScripts[dialogueOption].gameObject.SetActive(true);
         _connectedNPC.UpdateInfoScreen();
 
         for (int i = 0; i < thisDialogue.OptionResults.Length; i++)
@@ -74,6 +77,7 @@ public class DialogueController : MonoBehaviour
             _optionResults[i] = thisDialogue.OptionResults[i];
             _dialogueFriendshipChange[i] = thisDialogue.DialogueFriendshipChange[i];
             _assignedQuest[i] = thisDialogue.AssignedQuest[i];
+            _assignedInteractionScripts[i] = thisDialogue.DialogueObjectSpawns[i];
         }
 
         if (_optionResults.Length == 0)
