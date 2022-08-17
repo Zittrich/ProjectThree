@@ -31,7 +31,7 @@ MonoBehaviour:
   DialogueTraitUnlock: {fileID: 0}
   DialogueText: "Hm, es gibt da ein Buch, das hei\xDFt \"Zaubertranklehre leicht
     gemacht\". Ich bin mir aber nicht sicher, ob wir davon noch eins haben. Vielleicht
-    hat jemand anderes eins gesehen."
+    hat jemand anderes das gesehen."
   IsEnd: 1
   OneTimeUse: 0
   NewDialogue: {fileID: 0}

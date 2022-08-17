@@ -22,7 +22,7 @@ MonoBehaviour:
   - Ne danke...
   - 
   - 
-  DialogueFriendshipChange: 00000000000000000000000000000000
+  DialogueFriendshipChange: 01000000000000000000000000000000
   AssignedQuest:
   - {fileID: 0}
   - {fileID: 0}
@@ -32,5 +32,5 @@ MonoBehaviour:
   DialogueText: "Du willst bestimmt meine Notizen haben oder? Einfach so kriegst
     du die nicht, aber wenn du willst k\xF6nnen wir tauschen?"
   IsEnd: 0
-  OneTimeUse: 0
+  OneTimeUse: 1
   NewDialogue: {fileID: 0}

@@ -24,8 +24,8 @@ MonoBehaviour:
   - 
   DialogueFriendshipChange: 00000000000000000000000000000000
   AssignedQuest:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c0b46b8bc9633eb488e1e0c190e7f579, type: 2}
+  - {fileID: 11400000, guid: c1043ca58c1002d41ad6caabaad7ac5a, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   DialogueTraitUnlock: {fileID: 0}

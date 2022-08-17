@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1107646470767215710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299532662150443814}
+  - component: {fileID: 7756673121881425836}
+  - component: {fileID: 6422937193154715742}
+  - component: {fileID: 3106267710033778531}
+  - component: {fileID: 8787452908709435285}
+  - component: {fileID: 2039530301962629367}
+  m_Layer: 0
+  m_Name: Zalazar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &299532662150443814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107646470767215710}
+  m_LocalRotation: {x: -0, y: 0.22910605, z: -0, w: 0.9734015}
+  m_LocalPosition: {x: 0.0010759832, y: 0.8000002, z: 2.9578707}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3667028257723398179}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 26.489, z: 0}
+--- !u!33 &7756673121881425836
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107646470767215710}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &6422937193154715742
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107646470767215710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3106267710033778531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107646470767215710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859de6cec5eaf824a9cff629b090e7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractDialogue: {fileID: 11400000, guid: 2e0f77970530e694fa370ea48ee2131b, type: 2}
+  Name: Zalazar
+  Portrait: {fileID: 0}
+  InfoText:
+  - Zalazar, Zaubertranklehrer
+  - Cooler Dude
+  - 
+  - 
+  - 
+  Traits: []
+  FriendStage: 0
+--- !u!114 &8787452908709435285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107646470767215710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5374421683d3a8e4dab277819004621b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &2039530301962629367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107646470767215710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdb01bf00cb17b40bb072983237d96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeConsumption: 10
+--- !u!1001 &607433882914933245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 299532662150443814}
+    m_Modifications:
+    - target: {fileID: 3586624028069210980, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_Name
+      value: Professor_low 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9734015
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.22910605
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+--- !u!4 &3667028257723398179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4219291348332868062, guid: 2d924dcabbc099942862d44c5d68f123, type: 3}
+  m_PrefabInstance: {fileID: 607433882914933245}
+  m_PrefabAsset: {fileID: 0}
